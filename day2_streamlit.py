@@ -1,8 +1,6 @@
 import streamlit as st
 from streamlit.logger import get_logger
-from langchain_community.llms import HuggingFaceEndpoint
-from langchain_core.chat_models import ChatModel  # if needed
-
+from langchain_huggingface import HuggingFaceEndpoint,ChatHuggingFace
 
 logger = get_logger(__name__)
 
@@ -34,4 +32,3 @@ with st.form("sample_app"):
         ans = chat.invoke(txt)
         st.info(ans.content)
         logger.info("Done")
-
