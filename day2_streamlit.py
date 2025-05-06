@@ -1,6 +1,8 @@
 import streamlit as st
 from streamlit.logger import get_logger
-from langchain_huggingface import HuggingFaceEndpoint,ChatHuggingFace
+from langchain_community.llms import HuggingFaceEndpoint
+from langchain_core.chat_models import ChatModel  # if needed
+
 
 logger = get_logger(__name__)
 
